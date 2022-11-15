@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pio's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6b9d3e473b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <!-- Header -->
+    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo1.png" id="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Developer & Designer</h1>
+                <h2>Hey! I'm Aldan <span>Pio</span><br>Saint Omer from Saint Lucia</h2>
+            </div>
+            <div class="header-logos">
+                <img src="images/Adobe-Photoshop-CC-icon.png" id="ps">
+                <img src="images/Adobe-Illustrator-CC-icon.png" id="ai">
+                <img src="images/pyhton.png" id="python">
+                <img src="images/c++.png" id="cplusplus">
+                <img src="images/java-1.png" id="java">
+            </div>
+        </div>
+    </div>
+    
+    <!-- About --> 
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about-pic.png" alt="">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="about-title">About Me</h1>
+
+                    <p>I am 23 year old Web Developer and Graphic Designer. I gain my bachelors in Computer Science with Economics 
+                    from the University of the West Indies Cave Hill Campus. I aspire to become a Data Scientist so my academic 
+                    journey is far from over. As a developer I am proficient in languages such as HTML, CSS, and JavaScript. Also, 
+                    I am proficient in programming languages like Python, Java, and C++.<br><br>
+                    As a Graphic Designer, I have been practicing my work for a year and I am proficient in programmes such as Adobe 
+                    Photoshop and Adobe Illustrator. I also am knowledgable of Canva. I have interest in developing my skills to become
+                    a UX designer.</p>
+
+                    <div class="about-tab">
+                            <h2 class="about-tab-title active-title" onclick="opentab('skills')">Skills</h2>
+                            <h2 class="about-tab-title" onclick="opentab('webdevexp')">Web Dev Experience</h2>
+                            <h2 class="about-tab-title" onclick="opentab('gradesexp')">Graphic Design Experience</h2>
+                            <h2 class="about-tab-title" onclick="opentab('education')">Education</h2>
+                    </div>
+
+                    <div class="about-tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Website & Web App Development and Management</li>
+                            <li><span>Object Oriented Programming</span><br>OOP Development in Java</li>
+                            <li><span>Database Management</span><br>SQL in MySQL and MSSM</li>
+                            <li><span>Graphic Design</span><br>Proficient in Adobe Photoshop and Illustrator, and Canva</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-tab-content" id="webdevexp">
+                        <ul>
+                            <li><span>May 2022 - Present</span><br>Website maintenance at U-Report OECS</li>
+                            <li><span>June 2018 - August 2019</span><br>Website development and maintenance on WordPress for Dive Fair Helen</li>
+                        </ul>
+                    </div>
+    
+                    <div class="about-tab-content" id="gradesexp">
+                        <ul>
+                            <li><span>June 2022 - Present</span><br>Graphic Designer for the Caribbean Regional Youth Council</li>
+                            <li><span>June 2021 - June 2022</span><br>Public Relations Officer for the Saint Lucian Students' Association at Cave Hill</li>
+                        </ul>
+                    </div>
+    
+                    <div class="about-tab-content" id="education">
+                        <ul>
+                            <li><span>2019 - 2022</span><br>Bachelors of Science at University of the West Indies, Cave Hill Campus, Barbados</li>
+                            <li><span>2016 - 2018</span><br>Associates Certificate at Sir Arthur Lewis Community College, Castries, St. Lucia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div id="projects">
+        <div class="container">
+            <h1 class="projects-title">My Projects</h1>
+            <div class="projects-list">
+                <div>
+                    <i class="fa-solid fa-image"></i>
+                    <h2>Programming</h2>
+                    <p>List of programming projects which display my skills of Object Oriented Programming and Data Analytics.</p>
+                    <a href="#">View Them Here</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-image"></i>
+                    <h2>Web Design</h2>
+                    <p>List of Websites developed and designed for firms and organisations.</p>
+                    <a href="#">View Them Here</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-image"></i>
+                    <h2>Graphic Design</h2>
+                    <p>List of flyers, logos, and  publications created for orginisations.</p>
+                    <a href="#">View Them Here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tabtitle= document.getElementsByClassName("about-tab-title")
+        var tabcontent= document.getElementsByClassName("about-tab-content")
+        function opentab(tabname){
+            for (title of tabtitle){
+                title.classList.remove("active-title")
+            }
+            for (content of tabcontent){
+                content.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-title");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
